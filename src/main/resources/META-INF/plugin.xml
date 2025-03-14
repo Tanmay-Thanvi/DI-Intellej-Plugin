@@ -33,10 +33,4 @@
                     icon="AllIcons.Vcs.Branch"
                     factoryClass="org.deepintent.plugin.DiToolWindowFactory"/>
     </extensions>
-
-    <actions>
-        <action id="helloWorld" class="org.deepintent.plugin.HelloWorld" text="HelloWorldAction">
-            <add-to-group group-id="ToolsMenu" anchor="last"></add-to-group>
-        </action>
-    </actions>
 </idea-plugin>
