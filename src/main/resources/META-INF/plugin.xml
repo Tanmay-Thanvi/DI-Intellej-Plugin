@@ -31,6 +31,6 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="DI Plugin"
                     icon="AllIcons.Vcs.Branch"
-                    factoryClass="org.deepintent.plugin.DiToolWindowFactory"/>
+                    factoryClass="com.deepintent.plugin.DiToolWindowFactory"/>
     </extensions>
 </idea-plugin>

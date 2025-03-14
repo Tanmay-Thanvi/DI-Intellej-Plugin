@@ -1,4 +1,4 @@
-package org.deepintent.plugin.services.vpn;
+package com.deepintent.plugin.services.vpn;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -12,14 +12,12 @@ public class VpnStatusChecker {
       URL url = new URL(PRITUNL_CHECK_URL);
       HttpURLConnection connection = (HttpURLConnection) url.openConnection();
       connection.setRequestMethod("GET");
-      connection.setConnectTimeout(3000);  // 3-second timeout
+      connection.setConnectTimeout(3000);
       connection.setReadTimeout(3000);
       connection.connect();
-
-      int responseCode = connection.getResponseCode();
-      return responseCode == 200;  // If 200 OK, VPN is connected
+      return connection.getResponseCode() == 200; // VPN connected
     } catch (IOException e) {
-      return false;  // Any exception means VPN is disconnected
+      return false; // VPN disconnected
     }
   }
 
